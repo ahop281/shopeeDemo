@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Demo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div id="header">
+            <div class="nav flex--hcenter">
+                <div class="subnav subnav--left flex--hcenter">
+                    <a class="subnav__item subnav__item--hover" href="">Kênh Người Bán</a>
+                    <div class="subnav__link-separator"></div>
+                    <a class="subnav__item subnav__item--hover" href="">Trở thành Người bán Shopee</a>
+                    <div class="subnav__link-separator"></div>
+                    <div id="download-app">
+                        <a class="subnav__item subnav__item--hover" href="">
+                            Tải ứng dụng
+                        </a>
+                        <a id="download__container" href="">
+                            <div class="bg-white">
+                                <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/d91264e165ed6facc6178994d5afae79.png">
+                                <div id="store-list">
+                                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/39f189e19764dab688d3850742f13718.png">
+                                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/f4f5426ce757aea491dce94201560583.png">
+                                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/1ae215920a31f2fc75b00d4ee9ae8551.png">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="subnav__link-separator"></div>
+                    <div class="subnav__item">
+                        <div class="subnav__container flex--hcenter">
+                            Kết nối
+                            <a href=""><i class="fab fa-facebook subnav__item--icon"></i></a>
+                            <a href=""><i class="fab fa-instagram subnav__item--icon"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subnav subnav--right flex--hcenter">
+                    <div id="noti" class="subnav__item" onmouseover="notiAni();" onmouseout="removeNoti();">
+                        <div class="subnav__container subnav__item--hover flex--hcenter">
+                            <i class="far fa-bell subnav__item--icon"></i>
+                            Thông Báo
+                        </div>
+                        <div id="noti__wrap" class="noti__container flex--hcenter bg-white">
+                            
+                        </div>
+                    </div>
+                    <a class="subnav__item subnav__item--hover" href="">
+                        <div class="subnav__container flex--hcenter">
+                            <i class="far fa-question-circle subnav__item--icon"></i>
+                            Hỗ Trợ
+                        </div>
+                    </a>
+                    <a class="subnav__item subnav__item--hover" href="">Đăng Ký</a>
+                    <div class="subnav__link-separator"></div>
+                    <a class="subnav__item subnav__item--hover" href="">Đăng Nhập</a>
+                </div>
+            </div>
+            <div class="bar flex--hcenter">
+                <a class="logo flex--hcenter" href="">
+                    <i class="logo__icon fab fa-shopify"></i>
+                    <p class="logo__name">Shopee</p>
+                </a>
+                <div class="search">
+                    <form action="">
+                        <div class="search__box flex--hcenter">
+                            <input class="search__box--input" type="text" name="search" placeholder="21H Săn voucher đến 399K">
+                            <button class="search__box--btn" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="search__nav">
+                        <div class="search-nav__wrap flex--hcenter">
+                            <a href="" class="search-nav__item">Áo Khoác</a>
+                            <a href="" class="search-nav__item">Balo</a>
+                            <a href="" class="search-nav__item">Váy</a>
+                            <a href="" class="search-nav__item">Quần</a>
+                            <a href="" class="search-nav__item">Bông Tẩy Trang</a>
+                            <a href="" class="search-nav__item">Áo Phông</a>
+                            <a href="" class="search-nav__item">Nồi Chiên Không Dầu</a>
+                            <a href="" class="search-nav__item">Bánh Trung Thu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart" onmouseover="cartAppear();" onmouseout="removeCart();">
+                    <a href=""><i class="cart__icon fas fa-shopping-cart"></i></a>
+                    <div id="cart-hover" class="flex--hcenter bg-white">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="icon--bottom-right"></div>
+    <!-- content -->
+    <section id="container">
+        <div id="content">
+            <!-- slide banner -->
+            <div class="content-banner flex--hcenter">
+                <div class="content-banner-slide">
+                    <div id="banner-wrap" class="flex--hcenter">
+                        <a class="banner-click">
+                            <div class="banner-slide slide5"></div>
+                        </a>
+                        <a class="banner-click">
+                            <div class="banner-slide slide1"></div>
+                        </a>
+                        <a class="banner-click">
+                            <div class="banner-slide slide2"></div>
+                        </a>
+                        <a class="banner-click">
+                            <div class="banner-slide slide3"></div>
+                        </a>
+                        <a class="banner-click">
+                            <div class="banner-slide slide4"></div>
+                        </a>
+                        <a class="banner-click">
+                            <div class="banner-slide slide5"></div>
+                        </a>
+                        <a class="banner-click">
+                            <div class="banner-slide slide1"></div>
+                        </a>
+                    </div>
+
+                    <div class="btn-container btn-left nav-item">
+                        <div class="btn-wrap" onclick="leftBtn();">
+                            <i class="btn-icon fas fa-angle-left"></i>
+                        </div>
+                    </div>
+                    <div class="btn-container btn-right nav-item">
+                        <div class="btn-wrap" onclick="rightBtn();">
+                            <i class="btn-icon fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="dot-container nav-item">
+                        <div class="dot-wrap">
+                            <div class="dot-icon"></div>
+                        </div>
+                        <div class="dot-wrap">
+                            <div class="dot-icon"></div>
+                        </div>
+                        <div class="dot-wrap">
+                            <div class="dot-icon"></div>
+                        </div>
+                        <div class="dot-wrap">
+                            <div class="dot-icon"></div>
+                        </div>
+                        <div class="dot-wrap">
+                            <div class="dot-icon"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-banner-right flex--hcenter">
+                    <div class="content-banner-right__wrap banner__wrap-top">
+                        <a class="banner-click" >
+                            <div class="banner-slide slide6"></div>
+                        </a>
+                    </div>
+                    <div class="content-banner-right__wrap banner__wrap-bottom">
+                        <a class="banner-click" >
+                            <div class="banner-slide slide7"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- banner category -->
+            <div class="category__container flex--hcenter bg-white">
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-techzone"></div>
+                        <p class="category-item__name">
+                            Tech Zone - Siêu Thị Điện Tử
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-re"></div>
+                        <p class="category-item__name">
+                            Gì Cũng Rẻ - Từ 1K
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-hoanxu"></div>
+                        <p class="category-item__name">
+                            Hoàn Xu 10% - Đơn Từ 0Đ
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-card"></div>
+                        <p class="category-item__name">
+                            Nạp Thẻ, Hoá Đơn Và E-Voucher
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-xtra"></div>
+                        <p class="category-item__name">
+                            Freeship Xtra
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-hanghieu"></div>
+                        <p class="category-item__name">
+                            Hàng Hiệu -50%
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-hangqte"></div>
+                        <p class="category-item__name">
+                            Hàng Quốc Tế
+                        </p>
+                    </div>
+                </a>
+                <a>
+                    <div class="category-item__wrap flex--hcenter">
+                        <div class="category-item__icon icon-premium"></div>
+                        <p class="category-item__name">
+                            Shopee Premium
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <!-- banner -->
+            <div class="simple-banner">
+                <a>
+                    <img class="banner-img" src="./assets/image/simple-banner.png" alt="0đ">
+                </a>
+            </div>
+            <!-- sale buying form -->
+            <div class="sale-form">
+                <div class="sale-form__header">
+                    <img src="./assets/image/sale-form/sale-header.jpg" alt="" class="sale-header__img">
+                </div>
+                <div class="sale-form__content">
+                    <div class="sale__heading flex--hcenter">
+                        <div class="sale__text">BỎ DEAL VÀO GIỎ NGAY</div>
+                        <a>
+                            <div class="sale__text sale__btn flex--hcenter">
+                                Xem thêm  
+                                <i class="sale-btn__icon fas fa-caret-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sale__list list flex--hcenter">
+                        <a class="sale-item__wrap">
+                            <div class="sale__item list__item bg-white flex--hcenter">
+                                <img class="sale-item__img" src="./assets/image/sale-form/sale-item1.jpg" alt="">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    30.000
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">17%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="sale-item__wrap">
+                            <div class="sale__item list__item bg-white flex--hcenter">
+                                <img class="sale-item__img" src="./assets/image/sale-form/sale-item2.jpg" alt="">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    34.000
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">50%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="sale-item__wrap">
+                            <div class="sale__item list__item bg-white flex--hcenter">
+                                <img class="sale-item__img" src="./assets/image/sale-form/sale-item3.jpg" alt="">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    5.000
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">23%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="sale-item__wrap">
+                            <div class="sale__item list__item bg-white flex--hcenter">
+                                <img class="sale-item__img" src="./assets/image/sale-form/sale-item4.jpg" alt="">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    100.000
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">33%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="sale-item__wrap">
+                            <div class="sale__item list__item bg-white flex--hcenter">
+                                <img class="sale-item__img" src="./assets/image/sale-form/sale-item5.jpg" alt="">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    250.000
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">28%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="sale-item__wrap">
+                            <div class="sale__item list__item bg-white flex--hcenter">
+                                <img class="sale-item__img" src="./assets/image/sale-form/sale-item6.png" alt="">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    2.310.000
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">48%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="sale__footer">
+                    <img src="./assets/image/sale-form/sale-footer.jpg" alt="" style="display: block;">
+                </div>
+            </div>
+            <!-- category -->
+            <div class="list-category">
+                <div class="list-category__headder bg-white flex--hcenter">
+                    <h3 class="list-category__heading">DANH MỤC</h3>
+                </div>
+                <div class="list-category__app list-slide flex--hcenter">
+                    <div class="list-category__wrap list-slide__wrap">
+                        <div id="list-category__container" class="list-category__container list flex--hcenter">
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon01.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Thời Trang Nam</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon02.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Điện Thoại & Phụ Kiện</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon03.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Thiết Bị Điện Tử</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon1.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Máy Tính & Laptop</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon2.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Máy Ảnh & Máy Quay Phim</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon3.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Đông Hồ</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon4.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Giày Dép Nam</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon5.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Thiết Bị Điện Gia Dụng</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon6.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Thể Thao & Du Lịch</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon7.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Ô Tô & Xe Máy & Xe Đạp</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon8.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Balo & Túi Ví Nam</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon9.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Đồ Chơi</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon10.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Chăm Sóc Thú Cưng</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon11.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Thời Trang Nữ</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon12.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Mẹ & Bé</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon13.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Nhà Cửa & Đời Sống</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon14.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Sắc Đẹp</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon15.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Sức Khoẻ</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon16.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Giày Dép Nữ</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon17.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Túi Ví Nữ</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon18.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Phụ Kiện & Trang Sức Nữ</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon19.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Bách Hoá Online</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon20.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Nhà Sách Online</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon21.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Thời Trang Trẻ Em</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon22.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Giặt Giũ & Chăm Sóc Nhà Cửa</p>
+                                </div>
+                            </a>
+                            <a>
+                                <div class="list-category__item bg-white flex--hcenter">
+                                    <div class="list-category-item__icon">
+                                        <img src="./assets/image/list-category/icon23.png" alt="" style="width: 100%;">
+                                    </div>
+                                    <p class="list-category-item__name">Voucher & Dịch Vụ</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="list-btn__wrap list-btn__left flex--hcenter">
+                        <div id="list-category__btn--left" class="list__btn bg-white flex--hcenter" onclick="listCategoryLeft();">
+                            <i class="list-btn__icon fas fa-chevron-left"></i>
+                        </div>
+                    </div>
+                    <div class="list-btn__wrap list-btn__right flex--hcenter">
+                        <div id="list-category__btn--right" class="list__btn bg-white flex--hcenter" onclick="listCategoryRight();">
+                            <i class="list-btn__icon fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- flash sale -->
+            <div class="flash-sale">
+                <div class="flash-sale__header flex--hcenter">
+                    <div class="flash-sale-header__left flex--hcenter">
+                        <div class="flash-sale-header__logo">
+                            <img src="./assets/image/flash-sale/header-logo.png" alt="" style="width: 100%";>
+                        </div>
+                        <div class="flash-sale-header__clock flex--hcenter">
+                            <div class="clock__cell flex--hcenter">
+                                <div class="clock__digit">
+                                    <div id="clock-hour__first" class="clock-digits__container">
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                        <div class="clock-digit__number flex--hcenter">5</div>
+                                        <div class="clock-digit__number flex--hcenter">4</div>
+                                        <div class="clock-digit__number flex--hcenter">3</div>
+                                        <div class="clock-digit__number flex--hcenter">2</div>
+                                        <div class="clock-digit__number flex--hcenter">1</div>
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                    </div>
+                                </div>
+                                <div class="clock__digit">
+                                    <div id="clock-hour__second" class="clock-digits__container">
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                        <div class="clock-digit__number flex--hcenter">9</div>
+                                        <div class="clock-digit__number flex--hcenter">8</div>
+                                        <div class="clock-digit__number flex--hcenter">7</div>
+                                        <div class="clock-digit__number flex--hcenter">6</div>
+                                        <div class="clock-digit__number flex--hcenter">5</div>
+                                        <div class="clock-digit__number flex--hcenter">4</div>
+                                        <div class="clock-digit__number flex--hcenter">3</div>
+                                        <div class="clock-digit__number flex--hcenter">2</div>
+                                        <div class="clock-digit__number flex--hcenter">1</div>
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clock__cell flex--hcenter">
+                                <div class="clock__digit">
+                                    <div id="clock-minute__first" class="clock-digits__container">
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                        <div class="clock-digit__number flex--hcenter">5</div>
+                                        <div class="clock-digit__number flex--hcenter">4</div>
+                                        <div class="clock-digit__number flex--hcenter">3</div>
+                                        <div class="clock-digit__number flex--hcenter">2</div>
+                                        <div class="clock-digit__number flex--hcenter">1</div>
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                    </div>
+                                </div>
+                                <div class="clock__digit">
+                                    <div id="clock-minute__second" class="clock-digits__container">
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                        <div class="clock-digit__number flex--hcenter">9</div>
+                                        <div class="clock-digit__number flex--hcenter">8</div>
+                                        <div class="clock-digit__number flex--hcenter">7</div>
+                                        <div class="clock-digit__number flex--hcenter">6</div>
+                                        <div class="clock-digit__number flex--hcenter">5</div>
+                                        <div class="clock-digit__number flex--hcenter">4</div>
+                                        <div class="clock-digit__number flex--hcenter">3</div>
+                                        <div class="clock-digit__number flex--hcenter">2</div>
+                                        <div class="clock-digit__number flex--hcenter">1</div>
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clock__cell flex--hcenter">
+                                <div class="clock__digit">
+                                    <div id="clock-second__first" class="clock-digits__container">
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                        <div class="clock-digit__number flex--hcenter">5</div>
+                                        <div class="clock-digit__number flex--hcenter">4</div>
+                                        <div class="clock-digit__number flex--hcenter">3</div>
+                                        <div class="clock-digit__number flex--hcenter">2</div>
+                                        <div class="clock-digit__number flex--hcenter">1</div>
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                    </div>
+                                </div>
+                                <div class="clock__digit">
+                                    <div id="clock-second__second" class="clock-digits__container">
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                        <div class="clock-digit__number flex--hcenter">9</div>
+                                        <div class="clock-digit__number flex--hcenter">8</div>
+                                        <div class="clock-digit__number flex--hcenter">7</div>
+                                        <div class="clock-digit__number flex--hcenter">6</div>
+                                        <div class="clock-digit__number flex--hcenter">5</div>
+                                        <div class="clock-digit__number flex--hcenter">4</div>
+                                        <div class="clock-digit__number flex--hcenter">3</div>
+                                        <div class="clock-digit__number flex--hcenter">2</div>
+                                        <div class="clock-digit__number flex--hcenter">1</div>
+                                        <div class="clock-digit__number flex--hcenter">0</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="flash-sale-header__right">
+                        <div class="flash-sale-header__right-btn flex--hcenter">
+                            Xem Tất Cả
+                            <i class="sale-btn__icon fas fa-caret-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="flash-sale__app list-slide">
+                    <div class="flash-sale__list list-slide__wrap">
+                        <div id="list-flash-sale__container" class="flash-sale__container list flex--hcenter">
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item1.jpg" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    2.399.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <img class="sale-bar__fire" src="./assets/image/flash-sale/fire-bar.png"></img>
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 22</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">49%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item2.jpg" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    4.499.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 22%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 6</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">19%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item3.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    1.239.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 34%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 9</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">23%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item4.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    189.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 89%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <img class="sale-bar__fire" src="./assets/image/flash-sale/fire-bar.png"></img>
+                                        <div class="sale-bar sale-bar__text flex--hcenter">SẮP CHÁY HÀNG</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">49%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item5.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    990.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 12%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 22</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">18%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item6.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    249.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 25%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 35</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">9%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item1.jpg" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    559.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <img class="sale-bar__fire" src="./assets/image/flash-sale/fire-bar.png"></img>
+                                        <div class="sale-bar sale-bar__text flex--hcenter">SẮP CHÁY HÀNG</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">69%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item2.jpg" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    2.310.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 22</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">48%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item3.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    2.310.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 22</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">48%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item4.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    2.310.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 22</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">48%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item5.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    9.999.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 0%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 0</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">1%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item6.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    3.340.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 3</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">8%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item1.jpg" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    29.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 92%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <img class="sale-bar__fire" src="./assets/image/flash-sale/fire-bar.png"></img>
+                                        <div class="sale-bar sale-bar__text flex--hcenter">SẮP CHÁY HÀNG</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">99%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item2.jpg" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    669.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 72%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <img class="sale-bar__fire" src="./assets/image/flash-sale/fire-bar.png"></img>
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 79</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">69%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item3.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    499.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 22%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 4</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">48%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                                <img src="./assets/image/flash-sale/item4.png" alt="" style="width: 173px; height: 173px;">
+                                <div class="list-item__price">
+                                    <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
+                                    2.310.000
+                                </div>
+                                <div class="sale-bar sale-bar__container">
+                                    <div class="sale-bar__percent" style="width: 52%;">
+                                        <div class="sale-bar sale-bar__progress"></div>
+                                    </div>
+                                    <div class="sale-bar sale-bar__text-wrap">
+                                        <div class="sale-bar sale-bar__text flex--hcenter">ĐÃ BÁN 22</div> 
+                                    </div>
+                                </div>
+                                <div class="list-item__label">
+                                    <div class="list-item__percent">48%</div>
+                                    <div class="list-item__text">GIẢM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-btn__wrap list-btn__left flex--hcenter">
+                        <div id="list-flash-sale__btn--left" class="list__btn bg-white flex--hcenter" onclick="listFlashSaleLeft();">
+                            <i class="list-btn__icon fas fa-chevron-left"></i>
+                        </div>
+                    </div>
+                    <div class="list-btn__wrap list-btn__right flex--hcenter">
+                        <div id="list-flash-sale__btn--right" class="list__btn bg-white flex--hcenter" onclick="listFlashSaleRight();">
+                            <i class="list-btn__icon fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- skinny banner -->
+            <div class="skinny-banner flex--hcenter">
+                <div class="skinny-banner__item">
+                    <img src="./assets/image/skinny-banner/item1.jpg" alt="" style="display: block; width: 100%;">
+                </div>
+                <div class="skinny-banner__item">
+                    <img src="./assets/image/skinny-banner/item2.jpg" alt="" style="display: block; width: 100%;">
+                </div>
+                <div class="skinny-banner__item">
+                    <img src="./assets/image/skinny-banner/item3.jpg" alt="" style="display: block; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+        let noti = document.getElementById('noti__wrap');
+        function notiAni() {
+            setTimeout(() => {
+                noti.innerHTML = `
+                <div class="noti__content flex--hcenter">
+                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/99e561e3944805a023e87a81d4869600.png" alt="">
+                    <p>Đăng nhập để xem Thông báo</p>
+                </div>
+                <div class="noti__bar flex--hcenter">
+                    <a href="" class="noti__btn">Đăng ký</a>
+                    <a href="" class="noti__btn">Đăng nhập</a>
+                </div>
+                `;
+            }, 100);
+        }
+        function removeNoti() {
+            setTimeout(() => {
+                noti.innerHTML = ``;
+            }, 100);
+        }
+
+        let cart = document.getElementById('cart-hover');
+        function cartAppear() {
+            setTimeout(() => {
+                let cartHeight = 
+                cart.innerHTML = `
+                <div class="cart-hover__img">
+                    <img src="https://beadore.vn/assets/images/img-empty.png" alt="" style="height: 100%;">
+                </div>
+                <p class="cart-hover__content">Chưa Có Sản Phẩm</p>
+                `;
+            }, 100);
+        }
+        function removeCart() {
+            setTimeout(() => {
+                cart.innerHTML = ``;
+            }, 100);
+        }
+
+//  banner button
+
+        let slide = document.getElementById("banner-wrap");
+        let dot = document.getElementsByClassName("dot-icon");
+        let translate = -800;
+        slide.style.transform = `translateX(${translate}px)`;
+        dot[0].style.background = `#ee4d2d`;
+        slide.style.transition = `all ease .5s`;        
+
+        function slideLeft() {
+            translate -= 800;
+            slide.style.transform = `translateX(${translate}px)`;
+            if (translate == -4800) {
+                translate = -800;
+                setTimeout(() => {
+                    slide.style.transition = `none`;
+                    slide.style.transform = `translateX(${translate}px)`;
+                }, 500);
+                setTimeout(() => {
+                    slide.style.transition = `all ease .5s`;   
+                }, 510);
+            }
+            for (let i = 0; i < dot.length; i++)
+                dot[i].style.background = `rgba(255, 255, 255, 0.3)`;
+            dot[translate/-800 - 1].style.background = `#ee4d2d`;
+        }
+
+        function slideRight() {
+            translate += 800;
+            slide.style.transform = `translateX(${translate}px)`;
+            if (translate == 0) {
+                translate = -4000;
+                setTimeout(() => {
+                    slide.style.transition = `none`;
+                    slide.style.transform = `translateX(${translate}px)`;
+                }, 500);
+                setTimeout(() => {
+                    slide.style.transition = `all ease .5s`;   
+                }, 510);
+            }
+            for (let i = 0; i < dot.length; i++)
+                dot[i].style.background = `rgba(255, 255, 255, 0.3)`;
+            dot[translate/-800 - 1].style.background = `#ee4d2d`;
+        }
+        
+        let slideTime = setInterval(() => {
+            slideLeft();
+        }, 2000);
+
+        function rightBtn() {
+            slideLeft();
+            clearInterval(slideTime);
+            slideTime = setInterval(() => {
+                slideLeft();
+            }, 2000);
+        }
+
+        function leftBtn() {
+            clearInterval(slideTime);
+            slideRight();
+            slideTime = setInterval(() => {
+                slideLeft();
+            }, 2000);
+        }
+        
+        window.addEventListener("click", function (e) {
+            for (let i = 0; i < 5; i++)
+                if (e.target == dot[i]) {
+                    translate = -800*(i+1);
+                    slide.style.transform = `translateX(${translate}px)`;
+                    for (let i = 0; i < dot.length; i++)
+                        dot[i].style.background = `rgba(255, 255, 255, 0.3)`;
+                    dot[translate/-800 - 1].style.background = `#ee4d2d`;
+                    clearInterval(slideTime);
+                    slideTime = setInterval(() => {
+                        slideLeft();
+                    }, 2000);
+                }
+        });
+
+        let listCategory = document.getElementById('list-category__container');
+        let listCategoryBtnLeft = document.getElementById('list-category__btn--left');
+        let listCategoryBtnRight = document.getElementById('list-category__btn--right');
+        listCategoryLeft();
+        function listCategoryLeft() {
+            listCategory.style.transform = 'translateX(0px)';
+            setTimeout(() => {
+                listCategoryBtnLeft.style.opacity = '0';
+                listCategoryBtnRight.style.opacity = '1';
+            }, 400);
+        }
+        
+        function listCategoryRight() {
+            listCategory.style.transform = 'translateX(-360px)';
+            setTimeout(() => {
+                listCategoryBtnLeft.style.opacity = `1`;
+                listCategoryBtnRight.style.opacity = `0`;
+            }, 400);
+        }
+
+        let clockHourFirst = document.getElementById('clock-hour__first');
+        let clockHourSecond = document.getElementById('clock-hour__second');
+        let clockMinuteFirst = document.getElementById('clock-minute__first');
+        let clockMinuteSecond = document.getElementById('clock-minute__second');
+        let clockSecondFirst = document.getElementById('clock-second__first');
+        let clockSecondSecond = document.getElementById('clock-second__second');
+
+        clock(10, 0, 5);
+
+        function clock(hour, minute, second) {
+            if (hour >= 0 && minute >= 0 && second >= 0) {
+                clockHourFirst.style.transform = `translateY(${(hour-hour%10)/10*17}px)`;
+                clockHourSecond.style.transform = `translateY(${hour%10*17}px)`;
+                clockMinuteFirst.style.transform = `translateY(${(minute-minute%10)/10*17}px)`;
+                clockMinuteSecond.style.transform = `translateY(${minute%10*17}px)`;
+                clockSecondFirst.style.transform = `translateY(${(second-second%10)/10*17}px)`;
+                clockSecondSecond.style.transform = `translateY(${second%10*17}px)`;
+                if (second%10 == 0) {
+                    setTimeout(() => {
+                        clockSetDigit(clockSecondSecond, 10);
+                    }, 910);
+                }
+                if (second == 0) {
+                    setTimeout(() => {
+                        clockSetDigit(clockSecondFirst, 6);
+                    }, 910);
+                    if (minute%10 == 0) {
+                        setTimeout(() => {
+                            clockSetDigit(clockMinuteSecond, 10);
+                        }, 910);
+                    }
+                    if (minute == 0) {
+                        setTimeout(() => {
+                            clockSetDigit(clockMinuteFirst, 6);
+                        }, 910);
+                        if (hour%10 == 0) {
+                            setTimeout(() => {
+                                clockSetDigit(clockHourSecond, 10);
+                            }, 910);
+                        }
+                        if (hour == 0) {
+                            setTimeout(() => {
+                                clockSetDigit(clockHourFirst, 6);
+                            }, 910);
+                        }
+                    }
+                }
+            }
+            second--;
+            if (second < 0) {
+                second = 59;
+                minute--;
+            }
+            if (minute < 0) {
+                minute = 59;
+                hour--;
+            }
+            setTimeout(() => {
+                clock(hour, minute, second);
+            }, 1000);
+        }
+
+        function clockSetDigit(e, num) {
+            e.style.transition = `none`;
+            e.style.transform = `translateY(${num*17}px)`;
+            setTimeout(() => {
+                e.style.transition = `all ease .9s`;
+            }, 50);
+        }  
+
+        //------------------------flash-sale-------------------------
+        let listFlashSale = document.getElementById('list-flash-sale__container');
+        let listFlashSaleBtnLeft = document.getElementById('list-flash-sale__btn--left');
+        let listFlashSaleBtnRight = document.getElementById('list-flash-sale__btn--right');
+        let flashSale = 0;
+        listFlashSaleSlide();
+        function listFlashSaleLeft() {
+            flashSale += 1000;
+            if (flashSale > 0) flashSale = 0;
+            listFlashSaleSlide();
+        }
+        function listFlashSaleRight() {
+            flashSale -= 1000;
+            if (flashSale < -2000) flashSale = -2000;
+            listFlashSaleSlide();
+        }
+        
+        function listFlashSaleSlide() {     
+            listFlashSale.style.transform = `translateX(${flashSale}px)`;
+            listFlashSaleBtnLeft.style.opacity = `1`;
+            listFlashSaleBtnRight.style.opacity = `1`;
+            if (flashSale == 0) {
+                setTimeout(() => {
+                    listFlashSaleBtnLeft.style.opacity = `0`;
+                }, 400);
+            }
+            if (flashSale == -2000) {
+                setTimeout(() => {
+                    listFlashSaleBtnRight.style.opacity = `0`;
+                }, 400);
+            }
+        }
+
+    </script>
+</body>
+</html>
