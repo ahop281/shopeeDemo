@@ -70,7 +70,7 @@
                 </a>
                 <div class="search">
                     <form action="">
-                        <div class="search__box flex--hcenter">
+                        <div class="search__box bg-white flex--hcenter">
                             <input class="search__box--input" type="text" name="search" placeholder="21H Săn voucher đến 399K">
                             <button class="search__box--btn" type="button">
                                 <i class="fas fa-search"></i>
@@ -104,57 +104,56 @@
     <section id="container">
         <div id="content">
             <!-- slide banner -->
-            <div class="content-banner flex--hcenter">
+            <div class="slide-banner flex--hcenter">
                 <div class="content-banner-slide">
-                    <div id="banner-wrap" class="flex--hcenter">
-                        <a class="banner-click">
+                    <div id="banner-slide" class="list flex--hcenter">
+                        <a href="#">
                             <div class="banner-slide slide5"></div>
                         </a>
-                        <a class="banner-click">
+                        <a href="#">
                             <div class="banner-slide slide1"></div>
                         </a>
-                        <a class="banner-click">
+                        <a href="#">
                             <div class="banner-slide slide2"></div>
                         </a>
-                        <a class="banner-click">
+                        <a href="#">
                             <div class="banner-slide slide3"></div>
                         </a>
-                        <a class="banner-click">
+                        <a href="#">
                             <div class="banner-slide slide4"></div>
                         </a>
-                        <a class="banner-click">
+                        <a href="#">
                             <div class="banner-slide slide5"></div>
                         </a>
-                        <a class="banner-click">
+                        <a href="#">
                             <div class="banner-slide slide1"></div>
                         </a>
                     </div>
-
                     <div class="btn-container btn-left nav-item">
-                        <div class="btn-wrap" onclick="leftBtn();">
+                        <div class="btn-wrap" onclick="slideSwitch('banner-slide', 800, 6, -1);">
                             <i class="btn-icon fas fa-angle-left"></i>
                         </div>
                     </div>
                     <div class="btn-container btn-right nav-item">
-                        <div class="btn-wrap" onclick="rightBtn();">
+                        <div class="btn-wrap" onclick="slideSwitch('banner-slide', 800, 6, 1);">
                             <i class="btn-icon fas fa-angle-right"></i>
                         </div>
                     </div>
                     <div class="dot-container nav-item">
                         <div class="dot-wrap">
-                            <div class="dot-icon"></div>
+                            <div class="banner-slide__dot banner-dot-btn dot-icon" onclick="slideDot('banner-slide', 800, 6, 1);"></div>
                         </div>
                         <div class="dot-wrap">
-                            <div class="dot-icon"></div>
+                            <div class="banner-slide__dot banner-dot-btn dot-icon" onclick="slideDot('banner-slide', 800, 6, 2);"></div>
                         </div>
                         <div class="dot-wrap">
-                            <div class="dot-icon"></div>
+                            <div class="banner-slide__dot banner-dot-btn dot-icon" onclick="slideDot('banner-slide', 800, 6, 3);"></div>
                         </div>
                         <div class="dot-wrap">
-                            <div class="dot-icon"></div>
+                            <div class="banner-slide__dot banner-dot-btn dot-icon" onclick="slideDot('banner-slide', 800, 6, 4);"></div>
                         </div>
                         <div class="dot-wrap">
-                            <div class="dot-icon"></div>
+                            <div class="banner-slide__dot banner-dot-btn dot-icon" onclick="slideDot('banner-slide', 800, 6, 5);"></div>
                         </div>
                     </div>
                 </div>
@@ -239,15 +238,15 @@
                 </a>
             </div>
             <!-- banner -->
-            <div class="simple-banner">
+            <div class="simple-banner content-item__header">
                 <a>
                     <img class="banner-img" src="./assets/image/simple-banner.png" alt="0đ">
                 </a>
             </div>
             <!-- sale buying form -->
-            <div class="sale-form">
+            <div class="sale-form content-item__header">
                 <div class="sale-form__header">
-                    <img src="./assets/image/sale-form/sale-header.jpg" alt="" class="sale-header__img">
+                    <img src="./assets/image/sale-form/sale-header.jpg" alt="" style="display: block;">
                 </div>
                 <div class="sale-form__content">
                     <div class="sale__heading flex--hcenter">
@@ -346,12 +345,12 @@
             </div>
             <!-- category -->
             <div class="list-category">
-                <div class="list-category__headder bg-white flex--hcenter">
+                <div class="list-category__headder content-item__header content-item__container bg-white flex--hcenter">
                     <h3 class="list-category__heading">DANH MỤC</h3>
                 </div>
                 <div class="list-category__app list-slide flex--hcenter">
                     <div class="list-category__wrap list-slide__wrap">
-                        <div id="list-category__container" class="list-category__container list flex--hcenter">
+                        <div id="category-list" class="list-category__container list flex--hcenter">
                             <a>
                                 <div class="list-category__item bg-white flex--hcenter">
                                     <div class="list-category-item__icon">
@@ -562,21 +561,17 @@
                             </a>
                         </div>
                     </div>
-                    <div class="list-btn__wrap list-btn__left flex--hcenter">
-                        <div id="list-category__btn--left" class="list__btn bg-white flex--hcenter" onclick="listCategoryLeft();">
-                            <i class="list-btn__icon fas fa-chevron-left"></i>
-                        </div>
+                    <div class="category-list__btn list__btn list__btn--left bg-white flex--hcenter" onclick="listSurf('category-list', 360, 1, -1);">
+                        <i class="list-btn__icon fas fa-chevron-left"></i>
                     </div>
-                    <div class="list-btn__wrap list-btn__right flex--hcenter">
-                        <div id="list-category__btn--right" class="list__btn bg-white flex--hcenter" onclick="listCategoryRight();">
-                            <i class="list-btn__icon fas fa-chevron-right"></i>
-                        </div>
+                    <div class="category-list__btn list__btn list__btn--right bg-white flex--hcenter" onclick="listSurf('category-list', 360, 1, 1);">
+                        <i class="list-btn__icon fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
             <!-- flash sale -->
             <div class="flash-sale">
-                <div class="flash-sale__header flex--hcenter">
+                <div class="flash-sale__header content-item__header content-item__container flex--hcenter bg-white">
                     <div class="flash-sale-header__left flex--hcenter">
                         <div class="flash-sale-header__logo">
                             <img src="./assets/image/flash-sale/header-logo.png" alt="" style="width: 100%";>
@@ -677,8 +672,8 @@
                 </div>
                 <div class="flash-sale__app list-slide">
                     <div class="flash-sale__list list-slide__wrap">
-                        <div id="list-flash-sale__container" class="flash-sale__container list flex--hcenter">
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                        <div id="flash-sale-list" class="flash-sale__container list flex--hcenter">
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item1.jpg" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -697,8 +692,8 @@
                                     <div class="list-item__percent">49%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item2.jpg" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -716,8 +711,8 @@
                                     <div class="list-item__percent">19%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item3.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -735,8 +730,8 @@
                                     <div class="list-item__percent">23%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item4.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -755,8 +750,8 @@
                                     <div class="list-item__percent">49%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item5.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -774,8 +769,8 @@
                                     <div class="list-item__percent">18%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item6.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -793,8 +788,8 @@
                                     <div class="list-item__percent">9%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item1.jpg" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -813,8 +808,8 @@
                                     <div class="list-item__percent">69%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item2.jpg" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -832,8 +827,8 @@
                                     <div class="list-item__percent">48%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item3.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -851,8 +846,8 @@
                                     <div class="list-item__percent">48%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item4.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -870,8 +865,8 @@
                                     <div class="list-item__percent">48%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item5.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -889,8 +884,8 @@
                                     <div class="list-item__percent">1%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item6.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -908,8 +903,8 @@
                                     <div class="list-item__percent">8%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item1.jpg" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -928,8 +923,8 @@
                                     <div class="list-item__percent">99%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item2.jpg" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -948,8 +943,8 @@
                                     <div class="list-item__percent">69%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item3.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -967,8 +962,8 @@
                                     <div class="list-item__percent">48%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
-                            <div class="flash-sale__item list__item flex--hcenter bg-white">
+                            </a>
+                            <a class="flash-sale__item list__item flex--hcenter bg-white">
                                 <img src="./assets/image/flash-sale/item4.png" alt="" style="width: 173px; height: 173px;">
                                 <div class="list-item__price">
                                     <i class="fas fa-dollar-sign" style="font-size: 12px;"></i>
@@ -986,23 +981,19 @@
                                     <div class="list-item__percent">48%</div>
                                     <div class="list-item__text">GIẢM</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="list-btn__wrap list-btn__left flex--hcenter">
-                        <div id="list-flash-sale__btn--left" class="list__btn bg-white flex--hcenter" onclick="listFlashSaleLeft();">
-                            <i class="list-btn__icon fas fa-chevron-left"></i>
-                        </div>
+                    <div class="flash-sale-list__btn list__btn list__btn--left bg-white flex--hcenter" onclick="listSurf('flash-sale-list', 1000, 2, -1);">
+                        <i class="list-btn__icon fas fa-chevron-left"></i>
                     </div>
-                    <div class="list-btn__wrap list-btn__right flex--hcenter">
-                        <div id="list-flash-sale__btn--right" class="list__btn bg-white flex--hcenter" onclick="listFlashSaleRight();">
-                            <i class="list-btn__icon fas fa-chevron-right"></i>
-                        </div>
+                    <div class="flash-sale-list__btn list__btn list__btn--right bg-white flex--hcenter" onclick="listSurf('flash-sale-list', 1000, 2, 1);">
+                        <i class="list-btn__icon fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
             <!-- skinny banner -->
-            <div class="skinny-banner flex--hcenter">
+            <div class="skinny-banner  content-item__header flex--hcenter">
                 <div class="skinny-banner__item">
                     <img src="./assets/image/skinny-banner/item1.jpg" alt="" style="display: block; width: 100%;">
                 </div>
@@ -1011,6 +1002,234 @@
                 </div>
                 <div class="skinny-banner__item">
                     <img src="./assets/image/skinny-banner/item3.jpg" alt="" style="display: block; width: 100%;">
+                </div>
+            </div>
+            <!-- shopee mall -->
+            <div class="shopee-mall">
+                <div class="shopee-mall__header content-item__header content-item__container flex--hcenter bg-white">
+                    <div class="shopee-mall-header__left flex--hcenter">
+                        <a class="shopee-mall-header__title">shopee mall</a>
+                        <div class="separator"></div>
+                        <div class="shopee-mall-header__item">
+                            <i class="shopee-mall-header__icon fas fa-reply-all"></i>
+                            7 Ngày Miễn Phí Trả Hàng
+                        </div>
+                        <div class="shopee-mall-header__item">
+                            <i class="shopee-mall-header__icon fas fa-shield-alt"></i>
+                            Hàng Chính Hãng 100%
+                        </div>
+                        <div class="shopee-mall-header__item">
+                            <i class="shopee-mall-header__icon fas fa-truck-moving"></i>
+                            Miễn Phí Vận Chuyển
+                        </div>
+                    </div>
+                    <a class="shopee-mall-header__right">
+                        <div class="shopee-mall-header__btn flex--hcenter">
+                            Xem Tất Cả
+                            <i class="shopee-mall-header-btn__icon fas fa-chevron-circle-right"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="shopee-mall-content bg-white flex--hcenter">
+                    <div class="shopee-mall-slide">
+                        <div class="shopee-mall-slide__container">
+                            <div id="shopee-mall-slide" class="shopee-mall-slide__wrap list flex--hcenter">
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item7.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item1.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item2.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item3.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item4.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item5.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item6.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item7.png" alt="" style="display: block;">
+                                </a>
+                                <a class="shopee-mall-slide__item">
+                                    <img src="./assets/image/shopee-mall/slide-item1.png" alt="" style="display: block;">
+                                </a>
+                            </div>
+                            <div class="btn-container btn-left nav-item">
+                                <div class="btn-wrap" onclick="slideSwitch('shopee-mall-slide', 380, 8, -1);">
+                                    <i class="btn-icon fas fa-angle-left"></i>
+                                </div>
+                            </div>
+                            <div class="btn-container btn-right nav-item">
+                                <div class="btn-wrap" onclick="slideSwitch('shopee-mall-slide', 380, 8, 1);">
+                                    <i class="btn-icon fas fa-angle-right"></i>
+                                </div>
+                            </div>
+                            <div class="dot-container nav-item">
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 1);"></div>
+                                </div>
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 2);"></div>
+                                </div>
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 3);"></div>
+                                </div>
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 4);"></div>
+                                </div>
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 5);"></div>
+                                </div>
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 6);"></div>
+                                </div>
+                                <div class="dot-wrap">
+                                    <div class="shopee-mall-slide__dot shopee-mall-slide__dot dot-icon" onclick="slideDot('shopee-mall-slide', 380, 8, 7);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopee-mall-list list-slide">
+                        <div class="shopee-mall-list__wrap">
+                            <div id="shopee-mall-list" class="shopee-mall-list__container list flex--hcenter">
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item1.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item2.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item3.png);">
+                                        Mua là có quà
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item4.png);">
+                                        Giảm đến 50%
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item5.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item6.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item7.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item8.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item9.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item10.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item11.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item12.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item13.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item14.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item15.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item16.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item17.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item18.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item19.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item20.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item21.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item22.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item">
+                                    <div class="shopee-mall-list-item__img" style="background: no-repeat top/100% url(./assets/image/shopee-mall/list-item23.png);">
+                                        Sale cuồng nhiệt
+                                    </div>
+                                </a>
+                                <a href="#" class="shopee-mall-list__item shopee-mall-header__right flex--hcenter" style="justify-content: center;">
+                                    <div class="shopee-mall-header__btn flex--hcenter">
+                                        Xem Tất Cả
+                                        <i class="shopee-mall-header-btn__icon fas fa-chevron-circle-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shopee-mall-list__btn list__btn list__btn--left bg-white flex--hcenter" onclick="listSurf('shopee-mall-list', 800, 2, -1);">
+                            <i class="list-btn__icon fas fa-chevron-left"></i>
+                        </div>
+                        <div class="shopee-mall-list__btn list__btn list__btn--right bg-white flex--hcenter" onclick="listSurf('shopee-mall-list', 800, 2, 1);">
+                            <i class="list-btn__icon fas fa-chevron-right"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1058,107 +1277,134 @@
                 cart.innerHTML = ``;
             }, 100);
         }
+// --------------shopee mall------------
+// slide
 
-//  banner button
+//         function slideSurf(target, size, max, direct) {
+            
+//         }
 
-        let slide = document.getElementById("banner-wrap");
-        let dot = document.getElementsByClassName("dot-icon");
-        let translate = -800;
-        slide.style.transform = `translateX(${translate}px)`;
-        dot[0].style.background = `#ee4d2d`;
-        slide.style.transition = `all ease .5s`;        
 
-        function slideLeft() {
-            translate -= 800;
-            slide.style.transform = `translateX(${translate}px)`;
-            if (translate == -4800) {
-                translate = -800;
-                setTimeout(() => {
-                    slide.style.transition = `none`;
-                    slide.style.transform = `translateX(${translate}px)`;
-                }, 500);
-                setTimeout(() => {
-                    slide.style.transition = `all ease .5s`;   
-                }, 510);
-            }
-            for (let i = 0; i < dot.length; i++)
-                dot[i].style.background = `rgba(255, 255, 255, 0.3)`;
-            dot[translate/-800 - 1].style.background = `#ee4d2d`;
-        }
-
-        function slideRight() {
-            translate += 800;
-            slide.style.transform = `translateX(${translate}px)`;
-            if (translate == 0) {
-                translate = -4000;
-                setTimeout(() => {
-                    slide.style.transition = `none`;
-                    slide.style.transform = `translateX(${translate}px)`;
-                }, 500);
-                setTimeout(() => {
-                    slide.style.transition = `all ease .5s`;   
-                }, 510);
-            }
-            for (let i = 0; i < dot.length; i++)
-                dot[i].style.background = `rgba(255, 255, 255, 0.3)`;
-            dot[translate/-800 - 1].style.background = `#ee4d2d`;
-        }
-        
-        let slideTime = setInterval(() => {
-            slideLeft();
-        }, 2000);
-
-        function rightBtn() {
-            slideLeft();
-            clearInterval(slideTime);
-            slideTime = setInterval(() => {
-                slideLeft();
-            }, 2000);
-        }
-
-        function leftBtn() {
-            clearInterval(slideTime);
-            slideRight();
-            slideTime = setInterval(() => {
-                slideLeft();
-            }, 2000);
-        }
-        
-        window.addEventListener("click", function (e) {
-            for (let i = 0; i < 5; i++)
-                if (e.target == dot[i]) {
-                    translate = -800*(i+1);
-                    slide.style.transform = `translateX(${translate}px)`;
-                    for (let i = 0; i < dot.length; i++)
-                        dot[i].style.background = `rgba(255, 255, 255, 0.3)`;
-                    dot[translate/-800 - 1].style.background = `#ee4d2d`;
-                    clearInterval(slideTime);
-                    slideTime = setInterval(() => {
-                        slideLeft();
-                    }, 2000);
-                }
-        });
-
-        let listCategory = document.getElementById('list-category__container');
-        let listCategoryBtnLeft = document.getElementById('list-category__btn--left');
-        let listCategoryBtnRight = document.getElementById('list-category__btn--right');
-        listCategoryLeft();
-        function listCategoryLeft() {
-            listCategory.style.transform = 'translateX(0px)';
-            setTimeout(() => {
-                listCategoryBtnLeft.style.opacity = '0';
-                listCategoryBtnRight.style.opacity = '1';
-            }, 400);
-        }
-        
-        function listCategoryRight() {
-            listCategory.style.transform = 'translateX(-360px)';
-            setTimeout(() => {
-                listCategoryBtnLeft.style.opacity = `1`;
-                listCategoryBtnRight.style.opacity = `0`;
-            }, 400);
-        }
-
+//         let shopeeMallSlideWrap = document.getElementById("shopee-mall-slide");
+//         let shopeeMallDot = document.getElementsByClassName("shopee-mall-slide__dot");
+//         let shopeeMallTranslate = 1;
+//         shopeeMallSlideWrap.style.transform = `translateX(${shopeeMallTranslate*-380}px)`;
+//         shopeeMallDot[0].style.background = `#ee4d2d`;
+//         shopeeMallSlideWrap.style.transition = `all ease .5s`;        
+//         let shopeeMallCheck = true;
+//         function shopeeMallSlide() {
+//             shopeeMallSlideWrap.style.transform = `translateX(${shopeeMallTranslate*-380}px)`;
+//             if (shopeeMallTranslate == 0 || shopeeMallTranslate == 8) {
+//                 if (shopeeMallTranslate == 0) shopeeMallTranslate = 7;
+//                 else shopeeMallTranslate = 1;
+//                 setTimeout(() => {
+//                     shopeeMallSlideWrap.style.transition = `none`;
+//                     shopeeMallSlideWrap.style.transform = `translateX(${shopeeMallTranslate*-380}px)`;
+//                 }, 510);
+//                 setTimeout(() => {
+//                     shopeeMallSlideWrap.style.transition = `all ease .5s`;   
+//                 }, 540);
+//             }
+//             for (let i = 0; i < shopeeMallDot.length; i++)
+//                 shopeeMallDot[i].style.background = `rgba(255, 255, 255, 0.3)`;
+//             shopeeMallDot[shopeeMallTranslate - 1].style.background = `#ee4d2d`;
+//         }
+//         let shopeeMallSlideTime = setInterval(() => {
+//             shopeeMallTranslate++;
+//             shopeeMallSlide();
+//         }, 2000);
+//         function shopeeMallBtn() {
+//             shopeeMallCheck = false;
+//             setTimeout(() => {
+//                 shopeeMallCheck = true;  
+//             }, 575);
+//             shopeeMallSlide();
+//             clearInterval(shopeeMallSlideTime);
+//             shopeeMallSlideTime = setInterval(() => {
+//                 shopeeMallTranslate++;
+//                 shopeeMallSlide();
+//             }, 2000);
+//         }
+//         function shopeeMallRightBtn() {
+//             if (shopeeMallCheck) {
+//                 shopeeMallTranslate++;
+//                 shopeeMallBtn();
+//             }
+//         }
+//         function shopeeMallLeftBtn() {
+//             if (shopeeMallCheck) {
+//                 shopeeMallTranslate--;
+//                 shopeeMallBtn();
+//             }
+//         }
+//         window.addEventListener("click", function (e) {
+//             if (shopeeMallCheck) {
+//                 for (let i = 0; i < 8; i++)
+//                     if (e.target == shopeeMallDot[i]) shopeeMallTranslate = i+1;
+//                 shopeeMallBtn();
+//             }
+//         });
+// //  banner slide
+//         let bannerSlideWrap = document.getElementById("banner-wrap");
+//         let bannerDot = document.getElementsByClassName("banner-dot-btn");
+//         let bannerTranslate = 1;
+//         bannerSlideWrap.style.transform = `translateX(${bannerTranslate*-800}px)`;
+//         bannerDot[0].style.background = `#ee4d2d`;
+//         bannerSlideWrap.style.transition = `all ease .5s`;        
+//         let bannerCheck = true;
+//         function bannerSlide() {
+//             bannerSlideWrap.style.transform = `translateX(${bannerTranslate*-800}px)`;
+//             if (bannerTranslate == 0 || bannerTranslate == 6) {
+//                 if (bannerTranslate == 0) bannerTranslate = 5;
+//                 else bannerTranslate = 1;
+//                 setTimeout(() => {
+//                     bannerSlideWrap.style.transition = `none`;
+//                     bannerSlideWrap.style.transform = `translateX(${bannerTranslate*-800}px)`;
+//                 }, 510);
+//                 setTimeout(() => {
+//                     bannerSlideWrap.style.transition = `all ease .5s`;   
+//                 }, 540);
+//             }
+//             for (let i = 0; i < bannerDot.length; i++)
+//                 bannerDot[i].style.background = `rgba(255, 255, 255, 0.3)`;
+//             bannerDot[bannerTranslate - 1].style.background = `#ee4d2d`;
+//         }
+//         let bannerSlideTime = setInterval(() => {
+//             bannerTranslate++;
+//             bannerSlide();
+//         }, 2000);
+//         function bannerBtn() {
+//                 bannerCheck = false;
+//                 setTimeout(() => {
+//                     bannerCheck = true;  
+//                 }, 575);
+//                 bannerSlide();
+//                 clearInterval(bannerSlideTime);
+//                 bannerSlideTime = setInterval(() => {
+//                     bannerTranslate++;
+//                     bannerSlide();
+//                 }, 2000);
+//         }
+//         function bannerRightBtn() {
+//             if (bannerCheck) {
+//                 bannerTranslate++;
+//                 bannerBtn();
+//             }
+//         }
+//         function bannerLeftBtn() {
+//             if (bannerCheck) {
+//                 bannerTranslate--;
+//                 bannerBtn();
+//             }
+//         }
+//         window.addEventListener("click", function (e) {
+//             if (bannerCheck) {
+//                 for (let i = 0; i < 5; i++)
+//                     if (e.target == bannerDot[i]) bannerTranslate = i+1;
+//                 bannerBtn();
+//             }
+//         });
+// ---------flash sale clock------------
         let clockHourFirst = document.getElementById('clock-hour__first');
         let clockHourSecond = document.getElementById('clock-hour__second');
         let clockMinuteFirst = document.getElementById('clock-minute__first');
@@ -1228,36 +1474,124 @@
                 e.style.transition = `all ease .9s`;
             }, 50);
         }  
-
-        //------------------------flash-sale-------------------------
-        let listFlashSale = document.getElementById('list-flash-sale__container');
-        let listFlashSaleBtnLeft = document.getElementById('list-flash-sale__btn--left');
-        let listFlashSaleBtnRight = document.getElementById('list-flash-sale__btn--right');
-        let flashSale = 0;
-        listFlashSaleSlide();
-        function listFlashSaleLeft() {
-            flashSale += 1000;
-            if (flashSale > 0) flashSale = 0;
-            listFlashSaleSlide();
-        }
-        function listFlashSaleRight() {
-            flashSale -= 1000;
-            if (flashSale < -2000) flashSale = -2000;
-            listFlashSaleSlide();
-        }
-        
-        function listFlashSaleSlide() {     
-            listFlashSale.style.transform = `translateX(${flashSale}px)`;
-            listFlashSaleBtnLeft.style.opacity = `1`;
-            listFlashSaleBtnRight.style.opacity = `1`;
-            if (flashSale == 0) {
+// ----------list model--------------
+        let listCTrans = 0;
+        let listFSTrans = 0;
+        let listSMTrans = 0;
+        let listCheck = true;
+        let listSet = true;
+        listSurf('category-list', 0, 1, 0);
+        listSurf('flash-sale-list', 0, 1, 0);
+        listSurf('shopee-mall-list', 0, 1, 0);
+        listSet = false;
+        function listSurf(target, size, max, direct) {
+            if (listCheck || listSet) {
+                listCheck = false;
                 setTimeout(() => {
-                    listFlashSaleBtnLeft.style.opacity = `0`;
+                    listCheck = true;
+                }, 600);
+                let listTrans = 0;
+                if (target == 'category-list') {
+                    listCTrans += direct;
+                    listTrans = listCTrans;
+                }
+                else if (target == 'flash-sale-list') {
+                    listFSTrans += direct;
+                    listTrans = listFSTrans;
+                }
+                else if (target == 'shopee-mall-list') {
+                    listSMTrans += direct;
+                    listTrans = listSMTrans;
+                }
+                var list = document.getElementById(target);
+                list.style.transform = `translateX(${listTrans*-size}px)`;
+                setTimeout(() => {
+                    var listBtns = document.getElementsByClassName(target + '__btn');
+                    if (listTrans == 0) {
+                        listBtns[0].style.opacity = '0';
+                        listBtns[0].style.visibility = 'hidden';
+                    }
+                    else {
+                        listBtns[0].style.opacity = '1';
+                        listBtns[0].style.visibility = 'visible';
+                    }
+                    if (listTrans == max) {
+                        listBtns[1].style.opacity = '0';
+                        listBtns[1].style.visibility = 'hidden';
+                    }
+                    else {
+                        listBtns[1].style.opacity = '1';
+                        listBtns[1].style.visibility = 'visible';
+                    }
                 }, 400);
             }
-            if (flashSale == -2000) {
+        }
+// --------------slide model---------------
+        let slideBannerTrans = 1;
+        let slideSMTrans = 1;
+        let slideClick = true;
+        let slideSet = true;
+        let slideTime = setInterval(() => {
+            slideSet = true;
+            slideSwitch('banner-slide', 800, 6, 1);
+            slideSwitch('shopee-mall-slide', 380, 8, 1);
+            slideSet = false;
+        }, 2000);
+        slideSwitch('banner-slide', 800, 6, 0);
+        slideSwitch('shopee-mall-slide', 380, 8, 0);
+        slideSet = false;
+
+        function slideDot(target, size, max, pos) {
+            if (target == 'banner-slide') slideBannerTrans = pos;
+            else if (target == 'shopee-mall-slide') slideSMTrans = pos;
+            slideSwitch(target, size, max, 0);
+        }
+
+
+        function slideSwitch(target, size, max, direct) {
+            if (slideClick || slideSet) {
+                slideClick = false;
                 setTimeout(() => {
-                    listFlashSaleBtnRight.style.opacity = `0`;
+                    slideClick = true;
+                }, 600);
+                clearInterval(slideTime);
+                slideTime = setInterval(() => {
+                    slideSet = true;
+                    slideSwitch('banner-slide', 800, 6, 1);
+                    slideSwitch('shopee-mall-slide', 380, 8, 1);
+                    slideSet = false;
+                }, 2000);
+                var slideTrans = 0;
+                var slide = document.getElementById(target);
+                if (target == 'banner-slide') {
+                    slideBannerTrans += direct;
+                    slideTrans = slideBannerTrans;
+                    if (slideBannerTrans == 0) slideBannerTrans = max-1;
+                    else if (slideBannerTrans == max) slideBannerTrans = 1;
+                }
+                else if (target == 'shopee-mall-slide') {
+                    slideSMTrans += direct;
+                    slideTrans = slideSMTrans;
+                    if (slideSMTrans == 0) slideSMTrans = max-1;
+                    else if (slideSMTrans == max) slideSMTrans = 1;
+                }
+                slide.style.transform = `translateX(${slideTrans*-size}px)`;
+                if (slideTrans == 0 || slideTrans == max) {
+                    if (slideTrans == 0) slideTrans = max-1;
+                    else slideTrans = 1;
+                    setTimeout(() => {
+                        slide.style.transition = 'none';
+                        slide.style.transform = `translateX(${slideTrans*-size}px)`;
+                    }, 500);
+                    setTimeout(() => {
+                        slide.style.transition = 'all ease .5s';
+                    }, 550);
+                }
+                setTimeout(() => {
+                    var slideDot = document.getElementsByClassName(target + '__dot');
+                    for (var i = 0; i < slideDot.length; i++)
+                        slideDot[i].style.background = `rgba(255, 255, 255, 0.3)`;
+                    slideDot[slideTrans - 1].style.background = `#ee4d2d`;
                 }, 400);
             }
         }
